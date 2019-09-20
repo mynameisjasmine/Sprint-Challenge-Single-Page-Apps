@@ -11,14 +11,17 @@ export default function SearchForm({ onSearch }) {
   return (
     <section className="search-form">
       <form onSubmit={() => onSearch(query)}>
+      
         <input
           onChange={handleInputChange}
-          placeholder="name"
+          placeholder="search name"
           value={query.name}
           name="name"
         />
         <button type="submit">Search</button>
       </form>
+      
     </section>
-  );
+  ); 
+  
 }
