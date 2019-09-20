@@ -7,10 +7,12 @@ import LocationsList from './components/LocationsList.js';
 
 export default function App() {
   return <main>
+  
     <Header />
     <TabNav />
     <CharacterList />
     <LocationsList />
     <AppRouter />
+    
   </main>
 }
