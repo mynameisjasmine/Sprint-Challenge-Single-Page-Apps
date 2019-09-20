@@ -4,7 +4,7 @@ import CharacterCard from './CharacterCard';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-  const [characters, setCharacters] = useState([])
+  const [characters, setCharacters] = useState()
   
   useEffect(() => {
     // TODO: Add AJAX/API Request here - must run in `useEffect`
@@ -20,13 +20,15 @@ export default function CharacterList() {
   console.log("characters:", characters);
   
   if(!characters) {
-    return <h1>Loading...</h1>
+    return <h2>Loading...</h2>
   }else{
   
     return(
       <section className='character-list grid-view'>
   
-      <h2>{characters.map(character => <CharacterCard value={character}/>)}</h2>
+      <h2>{characters.map((character, index) =>
+        <CharacterCard value={character} key={index}/>
+        )}</h2>
       
     </section>
     

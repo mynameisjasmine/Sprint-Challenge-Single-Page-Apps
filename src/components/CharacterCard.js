@@ -1,7 +1,15 @@
-import React from 'react'
+import React from 'react';
+import styled from "styled-components";
 
-export default function CharacterCard ({ /* add props */ }) {
+
+
+
+export default function CharacterCard (props) {
+  console.log("props:", props)
   return (
-  <span>todo: location</span>
+  <div>
+  <span>{props.value.name}</span>
+  
+  </div>
   )
 }
